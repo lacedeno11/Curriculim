@@ -1,0 +1,174 @@
+:root {
+    --primary-color: #2c3e50;
+    --secondary-color: #e74c3c;
+    --accent-color: #3498db;
+    --light-color: #ecf0f1;
+    --dark-color: #34495e;
+    --text-light: #f5f5f5;
+    --text-dark: #333;
+    --shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Reset y estilos base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "WSDK Lubrifont TC", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background: #fff;
+    color: var(--text-dark);
+    line-height: 1.6;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+header {
+    text-align: left;
+    margin-bottom: 30px;
+}
+
+main {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+section {
+    margin-bottom: 32px;
+}
+
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 16px;
+}
+
+/* Menú de navegación */
+nav ul {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 0;
+    margin: 0 0 30px 0;
+    background-color: #fff;
+    list-style: none;
+}
+
+nav ul li {
+    background-color: #f5f5dc; /* beige */
+    border-radius: 8px;
+    padding: 10px 24px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+    transition: background 0.2s;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+}
+
+nav ul li:hover {
+    background-color: #e6e6d6;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-family: inherit;
+}
+
+/* Formulario de contacto estilizado para mantener coherencia visual */
+#form-contacto {
+    margin-top: 24px;
+    font-family: "WSDK Lubrifont TC", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+#form-contacto label {
+    font-weight: 500;
+    margin-bottom: 4px;
+    color: var(--text-dark);
+}
+#form-contacto input[type="text"],
+#form-contacto select,
+#form-contacto textarea {
+    padding: 8px 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-family: inherit;
+    background: #f5f5dc;
+    color: var(--text-dark);
+}
+#form-contacto select[multiple] {
+    height: 80px;
+}
+#form-contacto textarea {
+    resize: vertical;
+    min-height: 60px;
+    max-height: 200px;
+}
+#form-contacto button[type="submit"] {
+    background: #f5f5dc;
+    color: #333;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 24px;
+    font-size: 1rem;
+    font-family: inherit;
+    font-weight: 600;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+    cursor: pointer;
+    margin-top: 8px;
+    transition: background 0.2s;
+}
+#form-contacto button[type="submit"]:hover {
+    background: #e6e6d6;
+}
+#form-contacto div[style*="flex-direction:column"] {
+    gap: 16px;
+}
+#form-contacto span {
+    font-weight: 500;
+    color: var(--text-dark);
+}
+#form-contacto label[for="intereses"] {
+    margin-top: 8px;
+}
+#form-contacto .radio-group {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 8px;
+}
+#form-contacto input[type="radio"] {
+    accent-color: #bdb76b;
+}
+
+/* Estilos para el bloque de sobre mí */
+.sobre-mi-bloque {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+    margin-bottom: 24px;
+}
+.sobre-mi-foto {
+    width: 180px;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 50%;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+.sobre-mi-descripcion {
+    flex: 1 1 60%;
+    max-width: 60%;
+    font-size: 1.18rem;
+    text-align: justify;
+}
+@media (max-width: 700px) {
+    .sobre-mi-bloque {
+        flex-direction: column;
+        align-items: center;
+        gap: 16px;
+    }
+    .sobre-mi-descripcion {
+        max-width: 100%;
+        text-align: left;
+    }
+}
